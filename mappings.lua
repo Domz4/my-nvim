@@ -1,3 +1,4 @@
+---@type MappingsTable
 local M = {}
 
 M.general = {
@@ -5,6 +6,7 @@ M.general = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<A-k>"] = { ":m .-2<CR>==" },
     ["<A-j>"] = { ":m .+1<CR>==" },
+    ["<C-]>"] = { "<cmd>lua vim.lsp.buf.definition()<CR>" },
   },
   v = {
     ["<A-j>"] = { ":m '>+1<CR>gv-gv" },

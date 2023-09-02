@@ -12,6 +12,11 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "black",
+    "pyright",
+    "stylish-haskell",
+    "hls",
+    "ghc",
   },
   indent = {
     enable = true,
@@ -19,26 +24,35 @@ M.treesitter = {
     --   "python"
     -- },
   },
+  rainbow = {
+    enable = true,
+    query = "rainbow-parens",
+    hlgroups = {
+      "TSRainbowRed",
+      "TSRainbowOrange",
+      "TSRainbowYellow",
+      "TSRainbowGreen",
+      "TSRainbowCyan",
+      "TSRainbowBlue",
+      "TSRainbowViolet",
+    },
+  },
 }
 
 M.mason = {
   ensure_installed = {
-    -- lua stuff
     "lua-language-server",
     "stylua",
-
-    -- web dev stuff
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
     "deno",
     "prettier",
-
-    -- c/cpp stuff
     "clangd",
     "clang-format",
     "pyright",
     "stylish-haskell",
+    "black",
   },
 }
 

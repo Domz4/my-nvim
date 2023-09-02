@@ -46,13 +46,13 @@ M.base_16 = {
   base06 = "#cbcbcc",
   base07 = "#e4e4f5",
   base08 = "#ff0044",
-  base09 = "#4ad2dd",
+  base09 = "#8be9fd",
   base0A = "#f1fa8c",
   base0B = "#50fa7b",
   base0C = "#8062e0",
   base0D = "#45b2f5",
-  base0E = "#bd82ff",
-  base0F = "#e87979",
+  base0E = "#bd83f9",
+  base0F = "#f879b9",
 }
 
 M.polish_hl = {
