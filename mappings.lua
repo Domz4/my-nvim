@@ -4,6 +4,16 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<A-k>"] = { ":m .-2<CR>==" },
+    ["<A-j>"] = { ":m .+1<CR>==" },
+  },
+  v = {
+    ["<A-j>"] = { ":m '>+1<CR>gv-gv" },
+    ["<A-k>"] = { ":m '<-2<CR>gv-gv" },
+  },
+  i = {
+    ["<A-j>"] = { "<Esc>:m .+1<CR>==gi" },
+    ["<A-k>"] = { "<Esc>:m .-2<CR>==gi" },
   },
 }
 M.nvimtree = {
@@ -13,7 +23,7 @@ M.nvimtree = {
     ["<C-n>"] = { "<cmd> NvimTreeFocus <CR>", "Toggle nvimtree" },
     -- focus
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Focus nvimtree" },
- },
+  },
 }
 M.nvterm = {
   t = {

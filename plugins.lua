@@ -16,9 +16,8 @@ local plugins = {
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
-    end, -- Override to setup mason-lspconfig
+    end,
   },
-
   -- override plugin configs
   {
     "williamboman/mason.nvim",
@@ -51,6 +50,7 @@ local plugins = {
     "NvChad/nvim-colorizer.lua",
     enabled = true,
   },
+  { "hiphish/rainbow-delimiters.nvim" },
 }
 
 return plugins
