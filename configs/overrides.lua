@@ -56,4 +56,18 @@ M.nvimtree = {
   },
 }
 
+M.nvterm = {
+  terminals = {
+    type_opts = {
+      float = {
+        relative = "editor",
+        row = 0.08,
+        col = 0.1,
+        width = 0.8,
+        height = 0.8,
+      },
+    },
+  },
+}
+
 return M
