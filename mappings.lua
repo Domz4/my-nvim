@@ -1,4 +1,3 @@
----@type MappingsTable
 local M = {}
 
 M.general = {
@@ -19,15 +18,12 @@ M.general = {
 M.nvimtree = {
   plugin = true,
   n = {
-    -- toggle
     ["<C-n>"] = { "<cmd> NvimTreeFocus <CR>", "Toggle nvimtree" },
-    -- focus
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Focus nvimtree" },
   },
 }
 M.nvterm = {
   t = {
-    -- toggle in terminal mode
     ["<A-3>"] = {
       function()
         require("nvterm.terminal").toggle "float"
@@ -51,7 +47,6 @@ M.nvterm = {
   },
 
   n = {
-    -- toggle in normal mode
     ["<A-3>"] = {
       function()
         require("nvterm.terminal").toggle "float"
@@ -73,7 +68,6 @@ M.nvterm = {
       "Toggle vertical term",
     },
 
-    -- new
     ["<leader>1"] = {
       function()
         require("nvterm.terminal").new "horizontal"
@@ -95,7 +89,5 @@ M.nvterm = {
     },
   },
 }
-
--- more keybinds!
 
 return M
