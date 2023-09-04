@@ -58,11 +58,13 @@ M.mason = {
 
 -- git support in nvimtree
 M.nvimtree = {
+  on_attach = require "custom.configs.plugins.nvim-tree",
   git = {
     enable = true,
   },
 
   renderer = {
+    root_folder_label = true,
     highlight_git = true,
     icons = {
       show = {

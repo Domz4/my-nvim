@@ -22,6 +22,8 @@ M.nvimtree = {
   n = {
     ["<C-n>"] = { "<cmd> NvimTreeFocus <CR>", "Toggle nvimtree" },
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Focus nvimtree" },
+    -- ["l"] = { api.node.open.edit, opts "Open" },
+    -- ["h"] = { api.node.navigate.parent_close, opts "Close Directory" },
   },
 }
 M.nvterm = {
