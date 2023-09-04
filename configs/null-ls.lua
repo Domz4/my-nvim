@@ -7,6 +7,9 @@ local sources = {
   b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "javascript", "typescript", "reacttypecript" } },
   b.formatting.stylua,
   b.formatting.clang_format,
+  b.formatting.black,
+  b.diagnostics.ruff,
+  b.diagnostics.mypy,
 }
 
 null_ls.setup {
@@ -19,7 +22,7 @@ null_ls.setup {
         group = augroup,
         buffer = bufnr,
         callback = function()
-          vim.lsp.buf.format { async = false }
+          vim.lsp.buf.format { bufnr = bufnr }
         end,
       })
     end

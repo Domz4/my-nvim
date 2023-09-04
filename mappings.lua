@@ -3,6 +3,8 @@ local M = {}
 
 M.general = {
   n = {
+    ["<leader>tt"] = { "<cmd> TroubleToggle <CR>", "Trouble" },
+    ["<leader>ff"] = { "<cmd> Telescope <CR>", "Telescope" },
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<A-k>"] = { ":m .-2<CR>==" },
     ["<A-j>"] = { ":m .+1<CR>==" },

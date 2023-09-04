@@ -45,6 +45,12 @@ local plugins = {
     "NvChad/nvim-colorizer.lua",
     enabled = true,
   },
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    cmd = "TroubleToggle",
+    opts = {},
+  },
   { "hiphish/rainbow-delimiters.nvim" },
 }
 

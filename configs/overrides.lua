@@ -12,11 +12,7 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
-    "black",
     "pyright",
-    "stylish-haskell",
-    "hls",
-    "ghc",
   },
   indent = {
     enable = true,
@@ -51,7 +47,8 @@ M.mason = {
     "clangd",
     "clang-format",
     "pyright",
-    "stylish-haskell",
+    "mypy",
+    "ruff",
     "black",
   },
 }
