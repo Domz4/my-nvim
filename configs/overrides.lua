@@ -24,15 +24,20 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
+    -- | Lua
     "lua-language-server",
     "stylua",
+    -- | Front
+    "eslint-lsp",
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
     "deno",
     "prettier",
+    -- | C fam
     "clangd",
     "clang-format",
+    -- | Python
     "pyright",
     "mypy",
     "ruff",

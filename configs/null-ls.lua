@@ -10,6 +10,7 @@ local sources = {
   b.formatting.black,
   b.diagnostics.ruff,
   b.diagnostics.mypy,
+  b.diagnostics.eslint,
 }
 
 null_ls.setup {
