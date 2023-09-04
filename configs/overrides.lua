@@ -20,19 +20,6 @@ M.treesitter = {
     --   "python"
     -- },
   },
-  rainbow = {
-    enable = true,
-    query = "rainbow-parens",
-    hlgroups = {
-      "TSRainbowRed",
-      "TSRainbowOrange",
-      "TSRainbowYellow",
-      "TSRainbowGreen",
-      "TSRainbowCyan",
-      "TSRainbowBlue",
-      "TSRainbowViolet",
-    },
-  },
 }
 
 M.mason = {
@@ -50,6 +37,7 @@ M.mason = {
     "mypy",
     "ruff",
     "black",
+    "debugpy",
   },
 }
 

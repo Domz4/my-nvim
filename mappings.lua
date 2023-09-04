@@ -1,4 +1,3 @@
----@type MappingsTable
 local M = {}
 
 M.general = {
@@ -24,8 +23,6 @@ M.nvimtree = {
   n = {
     ["<C-n>"] = { "<cmd> NvimTreeFocus <CR>", "Toggle nvimtree" },
     ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Focus nvimtree" },
-    -- ["l"] = { api.node.open.edit, opts "Open" },
-    -- ["h"] = { api.node.navigate.parent_close, opts "Close Directory" },
   },
 }
 M.nvterm = {
@@ -92,6 +89,25 @@ M.nvterm = {
         require("nvterm.terminal").new "float"
       end,
       "New float term",
+    },
+  },
+}
+
+M.dap = {
+  plugin = true,
+  n = {
+    ["<leader>db"] = { "<cmd> DapToggleBreakpoint <CR>" },
+  },
+}
+
+M.dap_python = {
+  plugin = true,
+  n = {
+    ["<leader>dp"] = {
+      function()
+        require("dap-python").test_method()
+      end,
+      "Trigger debug tests",
     },
   },
 }
