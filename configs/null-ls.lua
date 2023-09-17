@@ -8,6 +8,9 @@ local sources = {
   b.formatting.stylua,
   b.formatting.clang_format,
   b.formatting.black,
+  b.formatting.stylish_haskell,
+
+  b.diagnostics.cppcheck,
   b.diagnostics.ruff,
   b.diagnostics.mypy,
   b.diagnostics.eslint,

@@ -14,7 +14,7 @@ M.base_30 = {
   grey = "#3e4145",
   grey_fg = "#44475A",
   grey_fg2 = "#4a4d51",
-  light_grey = "#525559",
+  light_grey = "#74777b",
   red = "#ff0044",
   baby_pink = "#ff8e8e",
   pink = "#ffa7a7",
@@ -33,7 +33,7 @@ M.base_30 = {
   statusline_bg = "#15191e",
   lightbg = "#24282d",
   pmenu_bg = "#3bdda2",
-  folder_bg = "#ff4355",
+  folder_bg = "#2277ff",
 }
 
 M.base_16 = {

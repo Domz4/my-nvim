@@ -12,7 +12,6 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
-    "pyright",
   },
   indent = {
     enable = true,
@@ -37,12 +36,15 @@ M.mason = {
     -- | C fam
     "clangd",
     "clang-format",
+    "codeldb",
     -- | Python
     "pyright",
     "mypy",
     "ruff",
     "black",
     "debugpy",
+    -- | Haskell
+    "haskell-language-server",
   },
 }
 
@@ -69,10 +71,10 @@ M.nvterm = {
     type_opts = {
       float = {
         relative = "editor",
-        row = 0.08,
-        col = 0.1,
-        width = 0.8,
-        height = 0.8,
+        row = 0.04,
+        col = 0.05,
+        width = 0.9,
+        height = 0.9,
       },
     },
   },

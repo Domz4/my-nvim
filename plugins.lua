@@ -1,6 +1,9 @@
 local overrides = require "custom.configs.overrides"
 local plugins = {
   {
+    "aca/emmet-ls",
+  },
+  {
     "neovim/nvim-lspconfig",
     dependencies = {
       {
@@ -40,7 +43,6 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
-
   {
     "NvChad/nvim-colorizer.lua",
     enabled = true,
@@ -49,7 +51,7 @@ local plugins = {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     cmd = "TroubleToggle",
-    opts = {},
+    opts = { position = "right", width = 55 },
   },
   {
     "mfussenegger/nvim-dap",
@@ -73,6 +75,7 @@ local plugins = {
   },
   {
     "rcarriga/nvim-dap-ui",
+    event = "VeryLazy",
     dependencies = "mfussenegger/nvim-dap",
     config = function()
       local dap = require "dap"
@@ -88,6 +91,14 @@ local plugins = {
         dapui.close()
       end
     end,
+  },
+  {
+    "mrcjkb/haskell-tools.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    branch = "2.x.x",
+    ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
 }
 

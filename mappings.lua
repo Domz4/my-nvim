@@ -2,8 +2,16 @@ local M = {}
 
 M.general = {
   n = {
-    ["<leader>tt"] = { "<cmd> TroubleToggle <CR>", "Trouble" },
+    ["<leader>y"] = { "<cmd> %y <CR>", "copy entire file" },
+    ["<leader>h"] = { "<cmd> nohlsearch <CR>", "clear search result" },
     ["<leader>ff"] = { "<cmd> Telescope <CR>", "Telescope" },
+    ["<leader>tt"] = { "<cmd> TroubleToggle <CR>", "Trouble" },
+    ["<leader>ts"] = {
+      function()
+        require("base46").toggle_transparency()
+      end,
+      "Toggle transparency",
+    },
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
     ["<A-k>"] = { ":m .-2<CR>==" },
     ["<A-j>"] = { ":m .+1<CR>==" },
