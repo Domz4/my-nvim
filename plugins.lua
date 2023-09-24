@@ -51,7 +51,7 @@ local plugins = {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     cmd = "TroubleToggle",
-    opts = { position = "right", width = 55 },
+    opts = { position = "bottom", width = 55 },
   },
   {
     "mfussenegger/nvim-dap",
