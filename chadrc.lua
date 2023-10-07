@@ -5,15 +5,14 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "rogue",
-  theme_toggle = { "rogue", "one_light" },
+  theme = "dracula_enhanced",
+  theme_toggle = { "dracula_enhanced", "one_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
   transparency = false,
   nvdash = {
     load_on_startup = true,
-
     header = {
       "       __   __ _______ ___  ",
       "    /\\(_ \\ / _|   _   ) _ \\ ",

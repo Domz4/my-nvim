@@ -9,6 +9,7 @@ local sources = {
   b.formatting.clang_format,
   b.formatting.black,
   b.formatting.stylish_haskell,
+  b.formatting.latexindent,
 
   b.diagnostics.cppcheck,
   b.diagnostics.ruff,

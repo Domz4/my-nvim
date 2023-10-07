@@ -12,17 +12,17 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    -- "latex",
   },
   indent = {
     enable = true,
-    -- disable = {
-    --   "python"
-    -- },
   },
 }
 
 M.mason = {
   ensure_installed = {
+    "texlab",
+    "latexindent",
     -- | Lua
     "lua-language-server",
     "stylua",
@@ -62,6 +62,26 @@ M.nvimtree = {
       show = {
         git = true,
       },
+    },
+  },
+  ui = {
+    confirm = {
+      remove = true,
+      trash = true,
+    },
+  },
+  log = {
+    enable = false,
+    truncate = false,
+    types = {
+      all = false,
+      config = false,
+      copy_paste = false,
+      dev = false,
+      diagnostics = false,
+      git = false,
+      profile = false,
+      watcher = false,
     },
   },
 }
