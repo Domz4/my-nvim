@@ -12,7 +12,7 @@ M.base_30 = {
   grey_fg = "#6272a4",
   grey_fg2 = "#6e6f79",
   light_grey = "#73747e",
-  red = "#ff7070",
+  red = "#ff0070",
   baby_pink = "#ff86d3",
   pink = "#FF79C6",
   line = "#3c3d49", -- for lines like vertsplit
@@ -22,10 +22,10 @@ M.base_30 = {
   blue = "#a1b1e3",
   yellow = "#F1FA8C",
   sun = "#FFFFA5",
-  purple = "#BD93F9",
+  purple = "#cDb3Ff",
   dark_purple = "#BD93F9",
   teal = "#92a2d4",
-  orange = "#FFB86C",
+  orange = "#FFB89C",
   cyan = "#8BE9FD",
   statusline_bg = "#2d2f3b",
   lightbg = "#41434f",
@@ -34,16 +34,16 @@ M.base_30 = {
 }
 
 M.base_16 = {
-  base00 = "#282936",
+  base00 = "#181926",
   base01 = "#3a3c4e",
   base02 = "#4d4f68",
   base03 = "#626483",
   base04 = "#62d6e8",
   base05 = "#e9e9f4",
-  base06 = "#f1f2f8",
-  base07 = "#f7f7fb",
+  base06 = "#ffffff",
+  base07 = "#f87dba",
   base08 = "#c377fd",
-  base09 = "#FFB86C",
+  base09 = "#FFB89C",
   base0A = "#32a6f8",
   base0B = "#F1FA8C",
   base0C = "#8be9fd",
@@ -55,6 +55,10 @@ M.base_16 = {
 M.polish_hl = {
   ["@function.builtin"] = { fg = M.base_30.cyan },
   ["@number"] = { fg = M.base_30.purple },
+  ["@punctuation.bracket"] = { fg = M.base_30.baby_pink },
+  ["@function.call"] = { fg = M.base_30.blue },
+  ["@constant"] = { fg = M.base_30.purple },
+  ["@parameter"] = { fg = M.base_30.red },
 }
 
 M.type = "dark"

@@ -12,6 +12,7 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "java",
     -- "latex",
   },
   indent = {
@@ -21,6 +22,9 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
+    "checkstyle",
+    "java-language-server",
+    "google-java-format",
     "texlab",
     "latexindent",
     -- | Lua
@@ -31,7 +35,6 @@ M.mason = {
     "css-lsp",
     "html-lsp",
     "typescript-language-server",
-    "deno",
     "prettier",
     -- | C fam
     "clangd",
@@ -44,7 +47,7 @@ M.mason = {
     "black",
     "debugpy",
     -- | Haskell
-    "haskell-language-server",
+    -- "haskell-language-server",
   },
 }
 
