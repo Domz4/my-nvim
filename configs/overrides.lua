@@ -54,8 +54,13 @@ M.mason = {
 -- git support in nvimtree
 M.nvimtree = {
   on_attach = require "custom.configs.plugins.nvim-tree",
+  -- filters = {
+  --   dotfiles = true,
+  -- },
+
   git = {
     enable = true,
+    ignore = false,
   },
 
   renderer = {

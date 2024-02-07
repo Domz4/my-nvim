@@ -2,6 +2,9 @@ local M = {}
 
 M.general = {
   n = {
+    -- have to redeclare ctl + e,b idk why
+    ["<C-b>"] = { "<ESC>^i", "Beginning of line" },
+    ["<C-e>"] = { "<End>", "End of line" },
     ["<leader>y"] = { "<cmd> %y <CR>", "copy entire file" },
     ["<leader>h"] = { "<cmd> nohlsearch <CR>", "clear search result" },
     ["<leader>ff"] = { "<cmd> Telescope <CR>", "Telescope" },

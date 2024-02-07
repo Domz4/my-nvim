@@ -5,8 +5,8 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "domze",
-  theme_toggle = { "domze", "domze" },
+  theme = "vscode_dark",
+  theme_toggle = { "vscode_dark", "vscode_dark" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -21,15 +21,6 @@ M.ui = {
       " / /__\\ \\| |   | | | | | | |",
       "/________\\_|   |_| |_|_| |_|",
     },
-    --
-    --   buttons = {
-    --     { "  Find File", "Spc f f", "Telescope find_files" },
-    --     { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
-    --     { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
-    --     { "  Bookmarks", "Spc m a", "Telescope marks" },
-    --     { "  Themes", "Spc t h", "Telescope themes" },
-    --     { "  Mappings", "Spc c h", "NvCheatsheet" },
-    -- },
   },
 }
 

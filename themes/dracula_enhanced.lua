@@ -12,7 +12,7 @@ M.base_30 = {
   grey_fg = "#6272a4",
   grey_fg2 = "#6e6f79",
   light_grey = "#73747e",
-  red = "#ff0070",
+  red = "#ff3365",
   baby_pink = "#ff86d3",
   pink = "#FF79C6",
   line = "#3c3d49", -- for lines like vertsplit
@@ -41,15 +41,15 @@ M.base_16 = {
   base04 = "#62d6e8",
   base05 = "#e9e9f4",
   base06 = "#ffffff",
-  base07 = "#f87dba",
+  base07 = "#786dba",
   base08 = "#c377fd",
   base09 = "#FFB89C",
   base0A = "#32a6f8",
   base0B = "#F1FA8C",
   base0C = "#8be9fd",
   base0D = "#6ce88a",
-  base0E = "#cd4c8a",
-  base0F = "#F8F8F2",
+  base0E = "#cc4c8a",
+  base0F = "#d8c8f2",
 }
 
 M.polish_hl = {

@@ -4,6 +4,18 @@ local plugins = {
     "aca/emmet-ls",
   },
   {
+    "sindrets/diffview.nvim",
+    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    ft = { "markdown" },
+    build = function()
+      vim.fn["mkdp#util#install"]()
+    end,
+  },
+  {
     "lervag/vimtex",
     lazy = false,
     config = function()
@@ -102,10 +114,7 @@ local plugins = {
   },
   {
     "mrcjkb/haskell-tools.nvim",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    branch = "2.x.x",
+    version = "^3",
     ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
   },
 }
