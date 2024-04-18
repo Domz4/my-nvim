@@ -1,5 +1,6 @@
 local overrides = require "custom.configs.overrides"
 local plugins = {
+  { "nvim-neotest/nvim-nio" },
   {
     "aca/emmet-ls",
   },

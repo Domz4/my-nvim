@@ -3,7 +3,9 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 local b = null_ls.builtins
 
 local sources = {
-  b.formatting.prettier.with { filetypes = { "html", "markdown", "css", "javascript", "typescript", "reacttypecript" } },
+  b.formatting.prettier.with {
+    filetypes = { "html", "markdown", "css", "javascript", "typescript", "reacttypecript", "vue" },
+  },
   b.formatting.stylua,
   b.formatting.clang_format.with { filetypes = { "c", "cpp", "cs", "cuda", "proto" } },
   b.formatting.black,

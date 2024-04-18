@@ -30,7 +30,7 @@ M.base_30 = {
   statusline_bg = "#212B2A",
   lightbg = "#2D3634",
   pmenu_bg = "#b389ef",
-  folder_bg = "#BD93F9",
+  folder_bg = "#ff6ff9",
 }
 
 M.base_16 = {
@@ -42,10 +42,10 @@ M.base_16 = {
   base05 = "#DEFFFC",
   base06 = "#ffffff",
   base07 = "#73949C",
-  base08 = "#609Ca7",
+  base08 = "#309Cb7",
   base09 = "#95BBC4",
-  base0A = "#9DD7C1",
-  base0B = "#FFb340",
+  base0A = "#3edb84",
+  base0B = "#ddb350",
   base0C = "#9bf9fd",
   base0E = "#aF8DfA",
   base0D = "#FF0055",

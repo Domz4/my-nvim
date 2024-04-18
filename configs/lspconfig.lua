@@ -12,6 +12,7 @@ local servers = {
   "pyright",
   "texlab",
   "jdtls",
+  "vuels",
 }
 
 for _, lsp in ipairs(servers) do
