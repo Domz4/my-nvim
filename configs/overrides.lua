@@ -22,6 +22,7 @@ M.treesitter = {
 
 M.mason = {
   ensure_installed = {
+    "rust-analyzer",
     "checkstyle",
     "java-language-server",
     "google-java-format",
@@ -106,6 +107,13 @@ M.nvterm = {
       },
     },
   },
+}
+
+M.Whichkey = {
+  init = function()
+    vim.o.timeout = true
+    vim.o.timeoutlen = 0
+  end,
 }
 
 return M

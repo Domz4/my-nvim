@@ -1,5 +1,21 @@
 local overrides = require "custom.configs.overrides"
 local plugins = {
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 2000
+    end,
+  },
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require "custom.configs.plugins.harpoon"
+    end,
+  },
   { "nvim-neotest/nvim-nio" },
   {
     "aca/emmet-ls",
@@ -28,9 +44,15 @@ local plugins = {
     "neovim/nvim-lspconfig",
     dependencies = {
       {
-        "jose-elias-alvarez/null-ls.nvim",
+        "nvimtools/none-ls.nvim",
         config = function()
           require "custom.configs.null-ls"
+        end,
+      },
+      {
+        "stevearc/conform.nvim",
+        config = function()
+          require "custom.configs.plugins.conform"
         end,
       },
     },

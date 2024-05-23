@@ -5,6 +5,38 @@ M.general = {
     -- have to redeclare ctl + e,b idk why
     ["<C-b>"] = { "<ESC>^i", "Beginning of line" },
     ["<C-e>"] = { "<End>", "End of line" },
+    -- harpoon
+    ["<leader>lx"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():add()
+      end,
+      "harpoon mark file",
+    },
+    -- harpoon
+    ["<leader>ld"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():remove()
+      end,
+      "harpoon delete file",
+    },
+
+    ["<leader>lk"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():next()
+      end,
+      "harpoon next",
+    },
+    ["<leader>lj"] = {
+      function()
+        local harpoon = require "harpoon"
+        harpoon:list():prev()
+      end,
+      "harpoon prev",
+    },
+    ["<leader>lt"] = { "<cmd> Telescope harpoon marks<CR>", "harpoon Telescope" },
     ["<leader>y"] = { "<cmd> %y <CR>", "copy entire file" },
     ["<leader>h"] = { "<cmd> nohlsearch <CR>", "clear search result" },
     ["<leader>ff"] = { "<cmd> Telescope <CR>", "Telescope" },

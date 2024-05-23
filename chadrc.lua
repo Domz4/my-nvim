@@ -5,12 +5,12 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "tokyonight",
-  theme_toggle = { "tokyonight", "tokyonight" },
+  theme = "oxocarbon",
+  theme_toggle = { "oxocarbon", "oxocarbon" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
-  transparency = false,
+  transparency = true,
   nvdash = {
     load_on_startup = true,
     header = {

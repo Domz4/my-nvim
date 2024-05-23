@@ -1,6 +1,7 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 local cmp_nvim_lsp = require "cmp_nvim_lsp"
+local util = require "lspconfig/util"
 local lspconfig = require "lspconfig"
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -13,6 +14,7 @@ local servers = {
   "texlab",
   "jdtls",
   "vuels",
+  -- "rust_analyzer",
 }
 
 for _, lsp in ipairs(servers) do
@@ -21,6 +23,21 @@ for _, lsp in ipairs(servers) do
     capabilities = capabilities,
   }
 end
+
+lspconfig.rust_analyzer.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "rust" },
+  cmd = { "rustup", "run", "stable", "rust-analyzer" },
+  root_dir = util.root_pattern "Cargo.toml",
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = {
+        allFeatures = true,
+      },
+    },
+  },
+}
 
 lspconfig.clangd.setup {
   on_attach = on_attach,
