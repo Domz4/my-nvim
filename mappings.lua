@@ -1,12 +1,15 @@
 local M = {}
+local map = vim.keymap.set
+map("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "flaot lsp error" })
 
+-- whichkey mappings
 M.general = {
   n = {
     -- have to redeclare ctl + e,b idk why
     ["<C-b>"] = { "<ESC>^i", "Beginning of line" },
     ["<C-e>"] = { "<End>", "End of line" },
     -- harpoon
-    ["<leader>lx"] = {
+    ["<leader>a"] = {
       function()
         local harpoon = require "harpoon"
         harpoon:list():add()
@@ -14,7 +17,7 @@ M.general = {
       "harpoon mark file",
     },
     -- harpoon
-    ["<leader>ld"] = {
+    ["<leader>dd"] = {
       function()
         local harpoon = require "harpoon"
         harpoon:list():remove()
@@ -22,25 +25,26 @@ M.general = {
       "harpoon delete file",
     },
 
-    ["<leader>lk"] = {
+    ["<leader>k"] = {
       function()
         local harpoon = require "harpoon"
         harpoon:list():next()
       end,
       "harpoon next",
     },
-    ["<leader>lj"] = {
+    ["<leader>j"] = {
       function()
         local harpoon = require "harpoon"
         harpoon:list():prev()
       end,
       "harpoon prev",
     },
-    ["<leader>lt"] = { "<cmd> Telescope harpoon marks<CR>", "harpoon Telescope" },
+    ["<leader>e"] = { "<cmd> Telescope harpoon marks<CR>", "harpoon Telescope" },
     ["<leader>y"] = { "<cmd> %y <CR>", "copy entire file" },
     ["<leader>h"] = { "<cmd> nohlsearch <CR>", "clear search result" },
     ["<leader>ff"] = { "<cmd> Telescope <CR>", "Telescope" },
-    ["<leader>tt"] = { "<cmd> TroubleToggle <CR>", "Trouble" },
+    ["<leader>tt"] = { "<cmd>Trouble diagnostics toggle<CR>", "Trouble" },
+    ["<leader>tx"] = { "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", "Buffer Diagnostics (Trouble)" },
     ["<leader>ts"] = {
       function()
         require("base46").toggle_transparency()
@@ -65,7 +69,7 @@ M.nvimtree = {
   plugin = true,
   n = {
     ["<C-n>"] = { "<cmd> NvimTreeFocus <CR>", "Toggle nvimtree" },
-    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>", "Focus nvimtree" },
+    ["<leader>le"] = { "<cmd> NvimTreeToggle <CR>", "Focus nvimtree" },
   },
 }
 M.nvterm = {

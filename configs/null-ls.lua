@@ -14,12 +14,12 @@ local sources = {
   -- b.formatting.clang_format.with { filetypes = { "c", "cpp", "cs", "cuda", "proto" } },
   -- b.formatting.black,
   -- b.formatting.stylish_haskell,
-  -- b.formatting.google_java_format,
   -- b.formatting.rustfmt.with { filetypes = { "rust" } },
-
+  -- b.diagnostics.ltrs,
   -- b.formatting.latexindent,
   -- b.diagnostics.eslint,
-  -- b.diagnostics.ltrs,
+
+  b.formatting.google_java_format,
   b.diagnostics.cppcheck,
   b.diagnostics.mypy,
   b.diagnostics.pylint,

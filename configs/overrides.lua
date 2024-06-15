@@ -59,6 +59,10 @@ M.nvimtree = {
   --   dotfiles = true,
   -- },
 
+  view = {
+    width = 50,
+  },
+
   git = {
     enable = true,
     ignore = false,

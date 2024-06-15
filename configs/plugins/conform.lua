@@ -9,8 +9,8 @@ conform.setup {
     python = { "black" },
     javascript = { { "prettierd", "prettier" } },
     haskell = { "fourmolu" },
-    java = { "google_java_format" },
     rust = { "rustfmt" },
+    -- java = { "google_java_format" },
     -- tex = { "latexindent" },
   },
 
