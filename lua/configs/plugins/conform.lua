@@ -4,15 +4,13 @@ conform.setup {
   formatters_by_ft = {
     c = { "clang_format" },
     cpp = { "clang_format" },
-    markdown = { { "prettierd", "prettier" } },
+    -- markdown = { "prettierd", "prettier", stop_after_first = true },
     lua = { "stylua" },
     python = { "black" },
-    javascript = { { "prettierd", "prettier" } },
+    javascript = { "prettierd", "prettier", stop_after_first = true },
     haskell = { "fourmolu" },
     rust = { "rustfmt" },
     sh = { "shfmt" },
-    -- java = { "google_java_format" },
-    -- tex = { "latexindent" },
   },
 
   format_on_save = {

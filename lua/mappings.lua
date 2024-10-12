@@ -19,7 +19,7 @@ end, { desc = "Toggle transparency" })
 map("n", ";", ":", { desc = "enter command mode", nowait = true })
 map("n", "<A-k>", ":m .-2<CR>==")
 map("n", "<A-j>", ":m .+1<CR>==")
-map("n", "<C-]>", "<cmd>lua vim.lsp.buf.definition()<CR>")
+map("n", "<C-q>", "<cmd>lua vim.lsp.buf.definition()<CR>")
 
 -- Visual mode mappings
 map("v", "<A-j>", ":m '>+1<CR>gv-gv")
@@ -28,7 +28,6 @@ map("v", "<A-k>", ":m '<-2<CR>gv-gv")
 -- Insert mode mappings
 map("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
 map("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
-
 -- nvim-tree mappings
 map("n", "<leader>le", "<cmd> NvimTreeToggle <CR>", { desc = "Focus nvimtree" })
 

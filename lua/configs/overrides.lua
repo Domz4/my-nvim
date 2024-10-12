@@ -53,51 +53,6 @@ M.mason = {
 }
 
 -- git support in nvimtree
-M.nvimtree = {
-  on_attach = require "configs.plugins.nvim-tree",
-  -- filters = {
-  --   dotfiles = true,
-  -- },
-
-  view = {
-    width = 50,
-  },
-
-  git = {
-    enable = true,
-    ignore = false,
-  },
-
-  renderer = {
-    root_folder_label = true,
-    highlight_git = true,
-    icons = {
-      show = {
-        git = true,
-      },
-    },
-  },
-  ui = {
-    confirm = {
-      remove = true,
-      trash = true,
-    },
-  },
-  log = {
-    enable = false,
-    truncate = false,
-    types = {
-      all = false,
-      config = false,
-      copy_paste = false,
-      dev = false,
-      diagnostics = false,
-      git = false,
-      profile = false,
-      watcher = false,
-    },
-  },
-}
 
 M.nvterm = {
   terminals = {

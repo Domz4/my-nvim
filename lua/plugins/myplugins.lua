@@ -1,24 +1,13 @@
 local overrides = require "configs.overrides"
 
 local plugins = {
+  { "mg979/vim-visual-multi" },
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
     init = function()
       vim.o.timeout = true
       vim.o.timeoutlen = 2000
-    end,
-  },
-  {
-    "mikesmithgh/kitty-scrollback.nvim",
-    enabled = true,
-    lazy = true,
-    cmd = { "KittyScrollbackGenerateKittens", "KittyScrollbackCheckHealth" },
-    event = { "User KittyScrollbackLaunch" },
-    -- version = '*', -- latest stable version, may have breaking changes if major version changed
-    -- version = '^5.0.0', -- pin major version, include fixes and features that do not have breaking changes
-    config = function()
-      require("kitty-scrollback").setup()
     end,
   },
   {
@@ -57,21 +46,10 @@ local plugins = {
         end,
         desc = "harpoon prev",
       },
-
-      -- {
-      --   "<leader>a",
-      --   function()
-      --     local harpoon = require "harpoon"
-      --     harpoon.ui:toggle_quick_menu(harpoon:list())
-      --   end,
-      --   desc = "harpoon quick menu",
-      -- },
     },
   },
   { "nvim-neotest/nvim-nio" },
-  {
-    "aca/emmet-ls",
-  },
+  { "aca/emmet-ls" },
   {
     "sindrets/diffview.nvim",
     cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
@@ -113,19 +91,6 @@ local plugins = {
       require "configs.lspconfig"
     end,
   },
-
-  {
-    "williamboman/mason.nvim",
-    opts = overrides.mason,
-  },
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = overrides.treesitter,
-  },
-  {
-    "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
-  },
   {
     "max397574/better-escape.nvim",
     event = "InsertEnter",
@@ -134,16 +99,23 @@ local plugins = {
     end,
   },
   {
-    "NvChad/nvim-colorizer.lua",
-    enabled = true,
-  },
-  {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
     cmd = "TroubleToggle",
     opts = { position = "bottom", width = 55 },
   },
-
+  {
+    "mrcjkb/haskell-tools.nvim",
+    version = "^3",
+    ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
+  },
+  -- overrides default settings
+  {
+    "nvim-tree/nvim-tree.lua",
+    opts = function()
+      return require "configs.plugins.nvim-tree-opts"
+    end,
+  },
   -- debugger fix needed as core folder no longer exist
   -- {
   --   "mfussenegger/nvim-dap",
@@ -184,11 +156,18 @@ local plugins = {
   --     end
   --   end,
   -- },
-  {
-    "mrcjkb/haskell-tools.nvim",
-    version = "^3",
-    ft = { "haskell", "lhaskell", "cabal", "cabalproject" },
-  },
+  -- {
+  --   "mikesmithgh/kitty-scrollback.nvim",
+  --   enabled = true,
+  --   lazy = true,
+  --   cmd = { "KittyScrollbackGenerateKittens", "KittyScrollbackCheckHealth" },
+  --   event = { "User KittyScrollbackLaunch" },
+  --   -- version = '*', -- latest stable version, may have breaking changes if major version changed
+  --   -- version = '^5.0.0', -- pin major version, include fixes and features that do not have breaking changes
+  --   config = function()
+  --     require("kitty-scrollback").setup()
+  --   end,
+  -- },
 }
 
 return plugins
