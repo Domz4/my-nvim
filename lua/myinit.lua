@@ -5,6 +5,9 @@ vim.opt.relativenumber = true
 vim.opt.textwidth = 0
 vim.opt.wrapmargin = 0
 
+-- bold or thin cursor on insert mode
+-- vim.opt.guicursor = ""
+
 -- set number # (optional - will help to visually verify that it's working)
 -- set textwidth=0
 -- set wrapmargin=0
