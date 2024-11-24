@@ -24,7 +24,9 @@ local sources = {
   b.diagnostics.mypy,
   b.diagnostics.pylint,
   b.diagnostics.stylint,
+  b.diagnostics.textidote,
   b.diagnostics.checkstyle.with {
+
     extra_args = { "-c", "/google_checks.xml" }, -- or "/sun_checks.xml" or path to self written rules
   },
 }

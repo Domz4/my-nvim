@@ -1,7 +1,7 @@
 local overrides = require "configs.overrides"
 
 local plugins = {
-  { "mg979/vim-visual-multi" },
+  { "mg979/vim-visual-multi", lazy = false },
   {
     "folke/which-key.nvim",
     event = "VeryLazy",

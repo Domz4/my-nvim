@@ -1,6 +1,7 @@
 require "nvchad.mappings"
 local M = {}
 local map = vim.keymap.set
+local nomap = vim.keymap.del
 
 map("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "flaot lsp error" })
 
@@ -52,3 +53,5 @@ map({ "n", "t" }, "<A-i>", function()
     },
   }
 end, { desc = "Terminal Toggle Floating term" })
+
+nomap("n", "<C-n>")
