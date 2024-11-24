@@ -20,6 +20,7 @@ local sources = {
   -- b.formatting.shfmt,
   --
   b.formatting.google_java_format,
+  b.code_actions.statix,
   b.diagnostics.cppcheck,
   b.diagnostics.mypy,
   b.diagnostics.pylint,

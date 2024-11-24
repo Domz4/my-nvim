@@ -4,10 +4,12 @@ local M = {}
 -- Path to overriding theme and highlights files
 local highlights = require "highlights"
 
-M.ui = {
-  theme = "melange",
-  theme_toggle = { "melange", "melange" },
+M.base46 = {
+  theme = "bearded-arc",
+  theme_toggle = { "bearded-arc", "bearded-arc" },
+}
 
+M.ui = {
   hl_override = highlights.override,
   hl_add = highlights.add,
   transparency = false,

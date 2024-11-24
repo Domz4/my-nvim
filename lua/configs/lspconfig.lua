@@ -9,7 +9,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 local servers = {
   "html",
   "cssls",
-  "tsserver",
+  "ts_ls",
   "pyright",
   "texlab",
   "jdtls",

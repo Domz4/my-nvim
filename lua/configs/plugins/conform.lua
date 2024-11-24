@@ -5,6 +5,7 @@ conform.setup {
     c = { "clang_format" },
     cpp = { "clang_format" },
     -- markdown = { "prettierd", "prettier", stop_after_first = true },
+    nix = { "nixfmt" },
     lua = { "stylua" },
     python = { "black" },
     javascript = { "prettierd", "prettier", stop_after_first = true },
