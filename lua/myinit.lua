@@ -4,6 +4,7 @@ vim.opt.linebreak = true
 vim.opt.relativenumber = true
 vim.opt.textwidth = 0
 vim.opt.wrapmargin = 0
+-- vim.g.vimtex_compiler_method = "luatex"
 
 -- bold or thin cursor on insert mode
 -- vim.opt.guicursor = ""

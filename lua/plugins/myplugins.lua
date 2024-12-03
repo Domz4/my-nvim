@@ -67,7 +67,6 @@ local plugins = {
     lazy = false,
     config = function()
       vim.g.vimtex_view_general_viewer = "zathura"
-      vimtex_compiler_method = "pdflatex"
     end,
   },
   {

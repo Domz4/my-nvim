@@ -5,8 +5,8 @@ local M = {}
 local highlights = require "highlights"
 
 M.base46 = {
-  theme = "bearded-arc",
-  theme_toggle = { "bearded-arc", "bearded-arc" },
+  theme = "domze",
+  theme_toggle = { "domze", "domze" },
 }
 
 M.ui = {
