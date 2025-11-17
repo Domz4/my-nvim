@@ -3,11 +3,14 @@ local M = {}
 local map = vim.keymap.set
 local nomap = vim.keymap.del
 
+map("n", "<leader>da", "<cmd>lua vim.lsp.buf.code_action()<CR>", { desc = "lsp code action" })
+
+-- map("i", "<C-l>", "<cmd>lua require('copilot.suggestion').accept_line()<CR>", { desc = "Copilot accept line" })
 map("n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", { desc = "flaot lsp error" })
 
 map("n", "<leader>e", "<cmd>Telescope harpoon marks<CR>", { desc = "harpoon Telescope" })
 
-map("n", "<leader>y", "<cmd> %y <CR>", { desc = "copy entire file" })
+map("n", "<leader>y", "<cmd>%y<CR>", { desc = "copy entire file" })
 map("n", "<leader>h", "<cmd> nohlsearch <CR>", { desc = "clear search result" })
 map("n", "<leader>ff", "<cmd> Telescope <CR>", { desc = "Telescope" })
 map("n", "<leader>tt", "<cmd>Trouble diagnostics toggle<CR>", { desc = "Trouble" })

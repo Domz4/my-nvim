@@ -13,6 +13,13 @@ return {
     end,
   },
 
+  {
+    "nvim-telescope/telescope.nvim",
+    opts = function()
+      require "configs.plugins.telescope"
+    end,
+  },
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {

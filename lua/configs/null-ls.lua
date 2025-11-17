@@ -19,6 +19,7 @@ local sources = {
   -- -- b.formatting.textidote,
   -- b.formatting.shfmt,
   --
+  -- b.formatting.scalafmt,
   b.formatting.google_java_format,
   b.code_actions.statix,
   b.diagnostics.cppcheck,

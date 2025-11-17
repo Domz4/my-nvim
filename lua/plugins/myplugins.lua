@@ -1,6 +1,45 @@
 local overrides = require "configs.overrides"
 
 local plugins = {
+  {
+    "supermaven-inc/supermaven-nvim",
+    lazy = false,
+    config = function()
+      require("supermaven-nvim").setup {
+        keymaps = {
+          accept_suggestion = "<C-a>",
+          clear_suggestion = "<C-]>",
+          accept_word = "<C-j>",
+        },
+        color = {
+          suggestion_color = "#ff0054",
+          cterm = 244,
+        },
+      }
+    end,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    opts = function(_, opts)
+      table.insert(opts.sources, { name = "vim-dadbod-completion" })
+    end,
+  },
+  {
+    "kristijanhusak/vim-dadbod-ui",
+    dependencies = {
+      { "tpope/vim-dadbod", lazy = true },
+      { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
+    },
+    cmd = {
+      "DBUI",
+      "DBUIToggle",
+      "DBUIAddConnection",
+      "DBUIFindBuffer",
+    },
+    init = function()
+      vim.g.db_ui_use_nerd_fonts = 1
+    end,
+  },
   { "mg979/vim-visual-multi", lazy = false },
   {
     "folke/which-key.nvim",
@@ -115,6 +154,91 @@ local plugins = {
       return require "configs.plugins.nvim-tree-opts"
     end,
   },
+
+  -- enable this when you want to use scala
+
+  -- {
+  --   "scalameta/nvim-metals",
+  --   dependencies = {
+  --     "nvim-lua/plenary.nvim",
+  --   },
+  --   ft = { "scala", "sbt", "java" },
+  --   config = function()
+  --     local metals = require "metals"
+  --     local on_attach = require("nvchad.configs.lspconfig").on_attach
+  --     local capabilities = require("nvchad.configs.lspconfig").capabilities
+  --
+  --     local metals_config = metals.bare_config()
+  --     metals_config.on_attach = on_attach
+  --     metals_config.capabilities = capabilities
+  --     metals_config.init_options.statusBarProvider = "on"
+  --
+  --     local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+  --
+  --     vim.api.nvim_create_autocmd("FileType", {
+  --       pattern = { "scala", "sbt", "java" },
+  --       callback = function()
+  --         metals.initialize_or_attach(metals_config)
+  --       end,
+  --       group = nvim_metals_group,
+  --     })
+  --   end,
+  -- },
+  --
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   config = function()
+  --     require("copilot_cmp").setup()
+  --   end,
+  -- },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   cmd = "Copilot",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("copilot").setup {}
+  --   end,
+  -- },
+  -- {
+  --   "EggbertFluffle/beepboop.nvim",
+  --   lazy = false,
+  --   opts = {
+  --     audio_player = "paplay",
+  --     volume = 50,
+  --     sound_directory = "/home/DomzeMahinePC/.config/nvim/sounds",
+  --     sound_map = {
+  --       { key_map = { mode = "n", key_chord = "<leader>pv" }, sound = "chestopen.oga" },
+  --       { key_map = { mode = "n", key_chord = "<C-Enter>" }, sound = "chestopen.oga" },
+  --       { auto_command = "VimEnter", sound = "chestopen.oga" },
+  --       { auto_command = "VimLeave", sound = "chestclosed.oga" },
+  --       {
+  --         auto_command = "InsertCharPre",
+  --         sounds = {
+  --           "deepslate1.ogg",
+  --           "deepslate3.ogg",
+  --           "deepslate3.ogg",
+  --           "deepslate4.ogg",
+  --           "deepslate5.ogg",
+  --           "deepslate6.ogg",
+  --         },
+  --       },
+  --       -- { auto_command = "InsertCharPre", sounds = { "stone1.oga", "stone2.oga", "stone3.oga", "stone4.oga" } },
+  --       { auto_command = "TextYankPost", sounds = { "classic_hurt.mp3" } },
+  --       -- { auto_command = "BufWrite", sounds = { "open_flip1.oga", "open_flip2.oga", "open_flip3.oga" } },
+  --       {
+  --         auto_command = "BufWrite",
+  --         sounds = {
+  --           "villager1.ogg",
+  --           "villager2.ogg",
+  --           "villager3.ogg",
+  --           "villager4.ogg",
+  --           "villager5.ogg",
+  --           "villager6.ogg",
+  --         },
+  --       },
+  --     },
+  --   },
+  -- },
   -- debugger fix needed as core folder no longer exist
   -- {
   --   "mfussenegger/nvim-dap",
