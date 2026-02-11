@@ -5,8 +5,8 @@ local M = {}
 local highlights = require "highlights"
 
 M.base46 = {
-  theme = "vscode_dark",
-  theme_toggle = { "vscode_dark", "vscode_dark" },
+  theme = "tundra",
+  theme_toggle = { "tundra", "tundra" },
 }
 
 M.ui = {

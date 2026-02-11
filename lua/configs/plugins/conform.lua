@@ -13,6 +13,7 @@ conform.setup {
     haskell = { "fourmolu" },
     rust = { "rustfmt" },
     sh = { "shfmt" },
+    json = { "prettier" },
   },
 
   format_on_save = {
